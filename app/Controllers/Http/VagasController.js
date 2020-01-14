@@ -36,7 +36,7 @@ class VagasController {
    */
   async store ({ request }) {
     const all = request.all()
-    await Vagas.create(all)  
+    await Vagas.create(all)
 
     return HelpersStatusCode.status200()
   }
@@ -65,8 +65,8 @@ class VagasController {
       return HelpersStatusCode.status404()
     }
 
-    find.merge({...requestAll})    
-    
+    find.merge({...requestAll})
+
     await find.save()
 
     return HelpersStatusCode.status200()
@@ -77,7 +77,7 @@ class VagasController {
    * DELETE vagases/:id
    */
   async destroy ({ params, response }) {
-    
+
     const find = await Vagas.find(params.id)
 
     if(!find){

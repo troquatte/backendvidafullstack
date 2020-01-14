@@ -1,9 +1,8 @@
 'use strict'
 
-const { test, trait } = use('Test/Suite')('Vagas')
+const { test, trait } = use('Test/Suite')('Auth')
 
 trait('Test/ApiClient')
-
 
 //Tenta logar com User e retronar Status 200 ok
 test('Auth User Jwt True', async ({ client }) => {
